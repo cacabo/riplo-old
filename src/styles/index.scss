@@ -2,11 +2,14 @@
  * Color variables
  */
 $border: rgba(0, 0, 0, 0.1);
-
 $primary: #ff4c7c;
 $light-primary: #ff668f;
 $lighter-primary: #ff82a3;
 $lightest-primary: #ffc1d1;
+
+/**
+ * General styling
+ */
 
 /**
  * Styling for navbar
@@ -45,17 +48,6 @@ nav {
 .hero {
   padding-top: 6rem;
   font-size: 1.4rem;
-
-  &::after {
-    z-index: -10;
-    content: "";
-    transform: rotate(45deg) translate(-10rem, -40rem);
-    background: $border;
-    position: absolute;
-    display: block;
-    width: 1px;
-    height: 40rem;
-  }
 
   &::before {
     z-index: -10;
@@ -109,6 +101,7 @@ nav {
   min-height: 100vh;
 
   .lines {
+    position: fixed;
     display: flex;
     width: 100%;
     height: 100vh;
