@@ -3,16 +3,123 @@
  */
 $border: rgba(0, 0, 0, 0.1);
 
+$primary: #ff4c7c;
+$light-primary: #ff668f;
+$lighter-primary: #ff82a3;
+$lightest-primary: #ffc1d1;
+
 /**
  * Styling for navbar
  */
 nav {
   width: 100%;
-  border-bottom: 1px solid $border;
-  padding: 0.5rem 0.75rem;
+  padding: 1rem 1.2rem;
+  position: fixed;
 
   .logo {
-    font-size: 1.6rem;
+    height: 2rem;
+    width: auto;
+    display: inline-block;
+    position: absolute;
+    top: 0.9rem;
+  }
+
+  .logo-text {
+    font-size: 2rem;
     margin-bottom: 0;
+    margin-left: 2.6rem;
+    display: inline-block;
+    width: auto;
+  }
+}
+
+.nav-space {
+  height: 59px;
+  display: block;
+  width: 100%;
+}
+
+/**
+ * Styling homepage
+ */
+.hero {
+  padding-top: 6rem;
+  font-size: 1.4rem;
+
+  &::after {
+    z-index: -10;
+    content: "";
+    transform: rotate(45deg) translate(-10rem, -40rem);
+    background: $border;
+    position: absolute;
+    display: block;
+    width: 1px;
+    height: 40rem;
+  }
+
+  &::before {
+    z-index: -10;
+    content: "";
+    opacity: 0.15;
+    right: 0;
+    top: -10rem;
+    position: absolute;
+    display: block;
+    width: 36rem;
+    height: 36rem;
+    background: $lightest-primary;
+    border-radius: 50%;
+  }
+
+  p::before {
+    z-index: -10;
+    content: "";
+    opacity: 0.15;
+    transform: translate(-5rem, -3rem);
+    position: absolute;
+    display: block;
+    width: 24rem;
+    height: 24rem;
+    background: $lightest-primary;
+    border-radius: 50%;
+  }
+
+  p::after {
+    z-index: -10;
+    content: "";
+    opacity: 0.4;
+    transform: translate(-4.2rem, -3.8rem);
+    position: absolute;
+    display: block;
+    width: 14rem;
+    height: 14rem;
+    background: $lightest-primary;
+    border-radius: 50%;
+  }
+}
+
+/**
+ * Styling background
+ */
+.background {
+  z-index: -10;
+  width: 100%;
+  position: absolute;
+  top: 0;
+  min-height: 100vh;
+
+  .lines {
+    display: flex;
+    width: 100%;
+    height: 100vh;
+
+    .line {
+      flex: 1;
+      border-right: 1px solid $border;
+    }
+
+    .line:last-child {
+      border-right: 0px solid transparent;
+    }
   }
 }
