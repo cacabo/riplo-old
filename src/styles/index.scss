@@ -1,0 +1,18 @@
+/**
+ * Color variables
+ */
+$border: rgba(0, 0, 0, 0.1);
+
+/**
+ * Styling for navbar
+ */
+nav {
+  width: 100%;
+  border-bottom: 1px solid $border;
+  padding: 0.5rem 0.75rem;
+
+  .logo {
+    font-size: 1.6rem;
+    margin-bottom: 0;
+  }
+}
