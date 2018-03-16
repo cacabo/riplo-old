@@ -6,7 +6,7 @@ class Nav extends Component {
     return (
       <div>
         <nav>
-          <img className="logo" src={Logo} />
+          <img className="logo" alt="Riplo" src={Logo} />
           <h1 className="logo-text">Riplo</h1>
         </nav>
         <div className="nav-space" />

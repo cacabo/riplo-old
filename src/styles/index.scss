@@ -24,7 +24,7 @@ nav {
     width: auto;
     display: inline-block;
     position: absolute;
-    top: 0.9rem;
+    top: 1rem;
   }
 
   .logo-text {
@@ -46,48 +46,87 @@ nav {
  * Styling homepage
  */
 .hero {
-  padding-top: 6rem;
+  padding: 6rem 0rem;
   font-size: 1.4rem;
+}
 
-  &::before {
-    z-index: -10;
-    content: "";
-    opacity: 0.15;
-    right: 0;
-    top: -10rem;
-    position: absolute;
-    display: block;
-    width: 36rem;
-    height: 36rem;
-    background: $lightest-primary;
-    border-radius: 50%;
+/**
+ * Styling cards
+ */
+.card {
+  border: 0px solid transparent;
+  border-radius: 0;
+  padding: 1rem;
+  box-shadow: 2px 8px 16px rgba(0, 0, 0, 0.05);
+}
+
+/**
+ * Styling forms
+ */
+form {
+  h4 {
+    margin-bottom: 1rem;
+    font-weight: bold;
   }
 
-  p::before {
-    z-index: -10;
-    content: "";
-    opacity: 0.15;
-    transform: translate(-5rem, -3rem);
-    position: absolute;
-    display: block;
-    width: 24rem;
-    height: 24rem;
-    background: $lightest-primary;
-    border-radius: 50%;
+  .col-6 {
+    padding-right: 7.5px;
   }
 
-  p::after {
-    z-index: -10;
-    content: "";
-    opacity: 0.4;
-    transform: translate(-4.2rem, -3.8rem);
-    position: absolute;
-    display: block;
-    width: 14rem;
-    height: 14rem;
-    background: $lightest-primary;
-    border-radius: 50%;
+  .col-6 + .col-6 {
+    padding-left: 7.5px;
+    padding-right: 15px;
   }
+
+  .form-control {
+    border: 2px solid $border;
+    margin-bottom: 1rem;
+    border-radius: 0px;
+    font-size: 16px;
+    padding: 0.75rem;
+  }
+
+  .btn {
+    border-radius: 0px;
+    background: transparent !important;
+    cursor: hand;
+    cursor: pointer;
+    color: black !important;
+    border: 2px solid black !important;
+    font-weight: bold;
+    width: 100%;
+    display: block;
+    font-size: 16px;
+    padding: 0.75rem 1rem;
+
+    &::after {
+      content: "";
+      display: absolute;
+      height: 2rem;
+      width: 2rem;
+      background: $primary;
+    }
+  }
+}
+
+::placeholder {
+  color: $border;
+}
+
+::-webkit-input-placeholder {
+  color: $border;
+}
+
+::-moz-placeholder {
+  color: $border;
+}
+
+:-ms-input-placeholder {
+  color: $border;
+}
+
+:-moz-placeholder {
+  color: $border;
 }
 
 /**
@@ -115,4 +154,11 @@ nav {
       border-right: 0px solid transparent;
     }
   }
+}
+
+/**
+ * Styling wrapper for contact
+ */
+.contact {
+  padding-bottom: 4rem;
 }
