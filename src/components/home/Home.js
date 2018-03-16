@@ -1,10 +1,12 @@
 import React, { Component } from 'react';
 import Contact from './Contact';
+import Video from './Video';
 
 class Home extends Component {
   render() {
     return (
       <div>
+        <Video />
         <div className="container hero">
           <div className="row">
             <div className="col-12 col-md-9 offset-md-1 col-lg-7 offset-lg-1 col-xl-6">

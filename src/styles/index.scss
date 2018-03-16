@@ -10,8 +10,16 @@ $lighter-primary: #ff82a3;
 $lightest-primary: #ffc1d1;
 
 /**
- * General styling
+ * Styling video
  */
+#video {
+  width: 100%;
+  height: auto;
+  position: absolute;
+  top: 0;
+  z-index: -10;
+  display: block;
+}
 
 /**
  * Styling for navbar
@@ -20,6 +28,9 @@ nav {
   width: 100%;
   padding: 1rem 1.2rem;
   position: fixed;
+  color: white;
+  transition: all 0.2s ease;
+  z-index: 1300;
 
   .logo {
     height: 2rem;
@@ -35,6 +46,20 @@ nav {
     margin-left: 2.6rem;
     display: inline-block;
     width: auto;
+  }
+
+  #white {
+    transition: all 0.2s ease;
+  }
+
+  &.scrolled {
+    color: black;
+    background: white;
+    box-shadow: 0px 8px 8px rgba(0, 0, 0, 0.05);
+
+    #white {
+      opacity: 0;
+    }
   }
 }
 
