@@ -13,8 +13,9 @@ $lightest-primary: #ffc1d1;
  * Styling video
  */
 #video {
-  width: 100%;
-  height: auto;
+  min-width: 100vw;
+  min-height: 60vh;
+  overflow: hidden;
   position: absolute;
   top: 0;
   z-index: -10;
@@ -74,7 +75,20 @@ nav {
  */
 .hero {
   padding: 6rem 0rem;
-  font-size: 1.4rem;
+
+  .hero-text {
+    font-size: 2.4rem;
+    color: white;
+    text-shadow: 1px 2px 3px rgba(0, 0, 0, 0.2);
+    line-height: 1.2;
+    font-weight: bold;
+
+    .underline {
+      border-bottom: 8px solid $primary;
+      transition: all 0.2s ease;
+      padding-bottom: -1rem;
+    }
+  }
 }
 
 /**

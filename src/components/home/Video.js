@@ -4,7 +4,7 @@ class Video extends Component {
   componentDidMount() {
     window.addEventListener('scroll', function() {
       const top = document.documentElement.scrollTop;
-      document.getElementById('video').style.top = -1 * top + "px";
+      document.getElementById('video').style.top = -1.5 * top + "px";
     });
   }
 
