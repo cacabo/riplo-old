@@ -13,7 +13,15 @@ class Home extends Component {
         <Video />
         <Hero />
         <About />
-        <Contact />
+        <div className="container">
+          <div className="row">
+            <div className="col-12 col-md-8 col-lg-6">
+              <div className="space-2" />
+              <Contact />
+              <div className="space-2" />
+            </div>
+          </div>
+        </div>
       </div>
     );
   }

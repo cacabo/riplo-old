@@ -1,0 +1,44 @@
+/**
+ * Styling for navbar
+ */
+nav {
+  width: 100%;
+  padding: 1rem 1.2rem;
+  position: fixed;
+  color: white;
+  transition: all 0.2s ease;
+  z-index: 1300;
+
+  .logo {
+    height: 2rem;
+    width: auto;
+    display: inline-block;
+    position: absolute;
+    top: 1rem;
+  }
+
+  .logo-text {
+    font-size: 2rem;
+    margin-bottom: 0;
+    margin-left: 2.8rem;
+    display: inline-block;
+    width: auto;
+    text-shadow: 0px 2px 6px rgba(0, 0, 0, 0.2);
+  }
+
+  &.scrolled {
+    color: black;
+    background: white;
+    box-shadow: 0px 8px 8px rgba(0, 0, 0, 0.05);
+
+    .logo-text {
+      text-shadow: 0px 2px 6px transparent;
+    }
+  }
+}
+
+.nav-space {
+  height: 59px;
+  display: block;
+  width: 100%;
+}

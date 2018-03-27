@@ -5,11 +5,11 @@ class About extends Component {
     return (
       <div className="container">
         <div className="row">
-          <div className="col-12 col-md-10 offset-md-1 col-lg-8 offset-lg-2">
+          <div className="col-12 col-md-10 offset-md-1 col-lg-7 offset-lg-1">
             <div className="card">
-              <h4 className="bold marg-bot-1">More about us</h4>
+              <h2 className="bold marg-bot-1">More about us</h2>
               <p>
-                Riplo is a student-run freelance web development company centered at the University of Pennsylvania. Its members specialize in fullstack development, utilizing technologies including Javascript, HTML/CSS, React/Redux, React Native, Express, Mongo, Firebase, Node, and more.
+                Riplo is a student-run freelance web development company centered at the University of Pennsylvania. Its members specialize in fullstack development.
               </p>
 
               <p>
@@ -19,6 +19,24 @@ class About extends Component {
               <p>
                 The team is always looking to bring on more clients and more developers. If you have an idea for an app or need help on an existing project, please feel free to get in touch. If you are an experienced developer looking to find a client base and work with a motivated team, send us an email.
               </p>
+            </div>
+          </div>
+          <div className="col-12 col-md-10 offset-md-1 col-lg-3 offset-lg-0">
+            <div className="space-2" />
+            <div className="space-2 hidden-md-down" />
+            <div className="card">
+              <h2 className="bold marg-bot-1">Technologies</h2>
+              <ul>
+                <li>Javascript</li>
+                <li>React/Redux</li>
+                <li>React Native</li>
+                <li>Express</li>
+                <li>MongoDB</li>
+                <li>Firebase</li>
+                <li>Node</li>
+                <li>HTML5/CSS3</li>
+                <li>...</li>
+              </ul>
             </div>
           </div>
         </div>

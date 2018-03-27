@@ -1,14 +1,14 @@
 @import './strapper';
+@import './colors';
+@import './nav';
 
 /**
- * Color variables
+ * General styling
  */
-$border: rgba(0, 0, 0, 0.1);
-$primary: #ff4c7c;
-$light-primary: #ff668f;
-$lighter-primary: #ff82a3;
-$lightest-primary: #ffc1d1;
-$secondary: #5065ff;
+body {
+  overflow-x: hidden !important;
+  width: 100vw;
+}
 
 /**
  * Styling video
@@ -21,50 +21,6 @@ $secondary: #5065ff;
   top: 0;
   z-index: -10;
   display: block;
-}
-
-/**
- * Styling for navbar
- */
-nav {
-  width: 100%;
-  padding: 1rem 1.2rem;
-  position: fixed;
-  color: white;
-  transition: all 0.2s ease;
-  z-index: 1300;
-
-  .logo {
-    height: 2rem;
-    width: auto;
-    display: inline-block;
-    position: absolute;
-    top: 1rem;
-  }
-
-  .logo-text {
-    font-size: 2rem;
-    margin-bottom: 0;
-    margin-left: 2.6rem;
-    display: inline-block;
-    width: auto;
-  }
-
-  #white {
-    transition: all 0.2s ease;
-  }
-
-  &.scrolled {
-    color: black;
-    background: white;
-    box-shadow: 0px 8px 8px rgba(0, 0, 0, 0.05);
-  }
-}
-
-.nav-space {
-  height: 59px;
-  display: block;
-  width: 100%;
 }
 
 /**
@@ -192,6 +148,17 @@ form {
       border-right: 0px solid transparent;
     }
   }
+}
+
+.purple-before::before {
+  content: "";
+  position: absolute;
+  border-radius: 50%;
+  background: $secondary-transparent;
+  width: 16rem;
+  height: 16rem;
+  z-index: -1;
+  transform: translate(-10rem, -6rem);
 }
 
 /**
