@@ -11,6 +11,26 @@ body {
   font-size: 1.2rem;
 }
 
+.squiggle-1,
+.squiggle-2 {
+  left: 1rem;
+  position: absolute;
+  width: 82px;
+  height: 16px;
+  background: radial-gradient(12px, transparent, transparent 2px, $primary 2px, $primary 5px, transparent 5px);
+  background-size: 14px 32px;
+  transform: translate(0px, -24px);
+  box-sizing: border-box;
+}
+
+.squiggle-2 {
+  width: 68px;
+  left: calc(1rem + 7px);
+  transform: translate(0, -8px);
+  background-size: 14px 32px;
+  background-position: 0px -16px;
+}
+
 /**
  * Styling video
  */
@@ -161,7 +181,7 @@ form {
 
     .line {
       flex: 1;
-      border-right: 1px solid $border;
+      border-right: 2px solid $border;
     }
 
     .line:last-child {
