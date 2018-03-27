@@ -1,7 +1,7 @@
 import React from 'react';
 
 export default () => (
-  <div className="card">
+  <div>
     <h2 className="bold marg-bot-1">Technologies</h2>
     <ul>
       <li>Javascript</li>
