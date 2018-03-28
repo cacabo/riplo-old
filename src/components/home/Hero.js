@@ -1,29 +1,30 @@
 import React, {Component} from 'react';
 import SmoothScroll from 'smooth-scroll';
+import Fade from 'react-reveal/Fade';
 
 class Hero extends Component {
-  componentDidMount() {
+  render() {
     const scroll = new SmoothScroll('a[href*="#"]', {
     	speed: 500,
     	offset: 100,
     });
-    const anchor = document.getElementById('about');
-    scroll.animateScroll(anchor);
-  }
 
-  render() {
     return (
       <div className="container hero">
         <div className="space-2 hidden-md-down" />
         <div className="row">
           <div className="col-12 col-md-9 offset-md-1 col-lg-7 offset-lg-1">
             <div className="pad-1 hero-text-wrapper">
-              <p className="hero-text">
-                We are a driven group of <span className="underline">student developers.</span>
-              </p>
-              <p className="hero-text">
-                We rapidly <span className="underline">build websites and mobile apps</span> with modern technologies and industry-trained best practices.
-              </p>
+              <Fade left>
+                <p className="hero-text">
+                  We are a driven group of <span className="underline">student developers.</span>
+                </p>
+              </Fade>
+              <Fade right>
+                <p className="hero-text">
+                  We rapidly <span className="underline">build websites and mobile apps</span> with modern technologies and industry-trained best practices.
+                </p>
+              </Fade>
             </div>
           </div>
         </div>
@@ -31,7 +32,16 @@ class Hero extends Component {
         <div className="space-2 hidden-xl-down" />
         <div className="arrow-wrapper">
           <a href="#about">
-            <i className="fa fa-chevron-down" aria-hidden="true" />
+            <i
+              className="fa fa-chevron-down"
+              aria-hidden="true"
+              onClick={(event) => {
+                if (document.getElementById('about')) {
+                  event.preventDefault();
+                  scroll.animateScroll(document.getElementById('about'));
+                }
+              }}
+            />
           </a>
         </div>
         <div className="space-4 hidden-md-down" />
