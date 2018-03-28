@@ -18,6 +18,8 @@ class Hero extends Component {
           </div>
         </div>
         <div className="space-4 hidden-md-down" />
+        <div className="space-4 hidden-md-down" />
+        <div className="space-4 hidden-lg-down" />
       </div>
     );
   }

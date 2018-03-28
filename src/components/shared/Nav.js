@@ -38,7 +38,7 @@ class Nav extends Component {
           <img className="logo" alt="Riplo" src={Logo} />
           <h1 className="logo-text">Riplo</h1>
           <div className="links">
-            <a>Home</a>
+            <a className="hidden-sm-down">Home</a>
             <a>About</a>
             <a>Projects</a>
             <a>Contact</a>
