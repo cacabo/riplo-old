@@ -42,6 +42,7 @@ class Nav extends Component {
             <a>About</a>
             <a>Projects</a>
             <a>Contact</a>
+            <a>Log in</a>
           </div>
         </nav>
         <div className="nav-space" />
