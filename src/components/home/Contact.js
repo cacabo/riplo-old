@@ -82,23 +82,33 @@ class Contact extends Component {
 
   render() {
     return (
-      <div className="card">
-        <form onSubmit={this.handleSubmit}>
-          <h4>Contact us</h4>
-          <ErrorMessage error={ this.state.error } />
-          <SuccessMessage message={this.state.success} />
-          <div className="row">
-            <div className="col-6">
-              <input onChange={this.handleChange} name="first" value={this.state.first} className="form-control" placeholder="First" />
-            </div>
-            <div className="col-6">
-              <input onChange={this.handleChange} name="last" value={this.state.last} className="form-control" placeholder="Last" />
+      <div className="container">
+        <div className="space-2" />
+        <div className="space-2 hidden-md-down" />
+        <div className="row">
+          <div className="col-12 col-md-8 col-lg-6">
+            <div className="card">
+              <form onSubmit={this.handleSubmit}>
+                <h4>Contact us</h4>
+                <ErrorMessage error={ this.state.error } />
+                <SuccessMessage message={this.state.success} />
+                <div className="row">
+                  <div className="col-6">
+                    <input onChange={this.handleChange} name="first" value={this.state.first} className="form-control" placeholder="First" />
+                  </div>
+                  <div className="col-6">
+                    <input onChange={this.handleChange} name="last" value={this.state.last} className="form-control" placeholder="Last" />
+                  </div>
+                </div>
+                <input onChange={this.handleChange} name="email" value={this.state.email} className="form-control" placeholder="Email" />
+                <textarea onChange={this.handleChange} name="message" value={this.state.message} className="form-control" placeholder="What are you looking for..." />
+                <input className="btn" type="submit" value="Send" />
+              </form>
             </div>
           </div>
-          <input onChange={this.handleChange} name="email" value={this.state.email} className="form-control" placeholder="Email" />
-          <textarea onChange={this.handleChange} name="message" value={this.state.message} className="form-control" placeholder="What are you looking for..." />
-          <input className="btn" type="submit" value="Send" />
-        </form>
+        </div>
+        <div className="space-4" />
+        <div className="space-2 hidden-md-down" />
       </div>
     );
   }

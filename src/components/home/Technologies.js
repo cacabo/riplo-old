@@ -1,10 +1,19 @@
 import React from 'react';
+import Computer from '../../img/computer.jpg';
 
 export default () => (
   <div className="container">
     <div className="space-2" />
+    <div className="space-2 hidden-md-down" />
     <div className="row">
-      <div className="col-12 col-md-10 offset-md-1 col-lg-8 offset-lg-3">
+      <div className="absolute col-10 offset-2 col-md-8 offset-md-3 col-lg-6 offset-lg-5">
+        <img src={Computer} className="img-fluid card-img" alt="computer" />
+      </div>
+      <div className="col-11 col-md-8 offset-md-2 col-lg-6 offset-lg-3">
+        <div className="space-4" />
+        <div className="space-3" />
+        <div className="space-2" />
+        <div className="space-2 hidden-md-down" />
         <div className="card">
           <h2 className="bold marg-bot-1">Technologies</h2>
           <div className="squiggle-1" />

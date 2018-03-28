@@ -1,6 +1,16 @@
 import React, {Component} from 'react';
+import SmoothScroll from 'smooth-scroll';
 
 class Hero extends Component {
+  componentDidMount() {
+    const scroll = new SmoothScroll('a[href*="#"]', {
+    	speed: 500,
+    	offset: 100,
+    });
+    const anchor = document.getElementById('about');
+    scroll.animateScroll(anchor);
+  }
+
   render() {
     return (
       <div className="container hero">
