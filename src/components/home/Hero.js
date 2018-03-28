@@ -17,7 +17,13 @@ class Hero extends Component {
             </div>
           </div>
         </div>
-        <div className="space-4 hidden-md-down" />
+        <div className="space-4 hidden-lg-down" />
+        <div className="space-2 hidden-xl-down" />
+        <div className="arrow-wrapper">
+          <a href="#about">
+            <i className="fa fa-chevron-down" aria-hidden="true" />
+          </a>
+        </div>
         <div className="space-4 hidden-md-down" />
         <div className="space-4 hidden-lg-down" />
       </div>

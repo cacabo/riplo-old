@@ -15,6 +15,7 @@ body {
 .squiggle-2 {
   left: 1rem;
   position: absolute;
+  top: 4.25rem;
   width: 82px;
   height: 16px;
   background: radial-gradient(12px, transparent, transparent 2px, $primary 2px, $primary 5px, transparent 5px);
@@ -105,6 +106,10 @@ body {
   border-radius: 0.2rem;
   padding: 1rem;
   box-shadow: -2px 6px 16px rgba(0, 0, 0, 0.075);
+
+  ul {
+    margin-bottom: 0;
+  }
 }
 
 /**
@@ -236,6 +241,30 @@ form {
       height: 12rem;
       z-index: -1;
       right: 0;
+    }
+  }
+}
+
+.arrow-wrapper {
+  width: 100%;
+  text-align: center;
+
+  .fa {
+    font-size: 2.2rem;
+    color: white;
+    opacity: 0.8;
+    padding: 0.5rem;
+    border-radius: 50%;
+    cursor: hand;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    padding: 0.5rem;
+    background: $light-gray;
+
+    &:hover {
+      background: $secondary-transparent;
+      opacity: 1;
+      transform: scale(1.2);
     }
   }
 }

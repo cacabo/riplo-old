@@ -3,11 +3,13 @@ import React, {Component} from 'react';
 class About extends Component {
   render() {
     return (
-      <div className="container about">
+      <div className="container about" id="about">
         <div className="row">
           <div className="col-12 col-md-10 offset-md-1 col-lg-8">
             <div className="card">
-              <h2 className="bold marg-bot-1">More about us</h2>
+              <h2 className="bold marg-bot-1">
+                More about us
+              </h2>
               <div className="squiggle-1" />
               <div className="squiggle-2" />
               <p>
