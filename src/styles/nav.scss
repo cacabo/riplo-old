@@ -66,6 +66,10 @@ nav {
   }
 }
 
+/**
+ * Space that hides behind the fixed navbar such that all other elements are
+ * properly positioned on the page
+ */
 .nav-space {
   height: 59px;
   display: block;

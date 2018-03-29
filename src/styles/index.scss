@@ -1,7 +1,10 @@
+// Import other stylesheets
 @import './strapper';
 @import './colors';
 @import './nav';
 @import './footer';
+@import './home';
+@import './form';
 
 /**
  * General styling
@@ -13,6 +16,9 @@ body {
   background: rgba(0, 5, 10, 0.01);
 }
 
+/**
+ * Styling squiggles used in some cards
+ */
 .squiggle-1,
 .squiggle-2 {
   left: 1rem;
@@ -32,72 +38,6 @@ body {
   transform: translate(0, -8px);
   background-size: 14px 32px;
   background-position: 0px -16px;
-}
-
-/**
- * Styling video
- */
-#video {
-  min-width: 100vw;
-  max-width: 100vw;
-  min-height: 60vh;
-  overflow: hidden;
-  position: absolute;
-  top: 0;
-  z-index: -10;
-  display: block;
-}
-
-@media screen and (max-width: 848px) {
-  #video {
-    min-height: 60vh;
-    max-height: 100vh;
-    min-width: 100vw;
-    max-width: none;
-  }
-}
-
-@media screen and (max-device-width: 848px) {
-  #video {
-    min-height: 60vh;
-    max-height: 100vh;
-    min-width: 100vw;
-    max-width: none;
-  }
-}
-
-/**
- * Styling homepage
- */
-.hero {
-  padding: 2rem 0rem;
-
-  .hero-text {
-    font-size: 2.4rem;
-    color: white;
-    text-shadow: 1px 2px 3px rgba(0, 0, 0, 0.2);
-    line-height: 1.2;
-    font-weight: bold;
-    margin-bottom: 1.5rem;
-
-    .underline {
-      border-bottom: 8px solid $primary;
-      transition: all 0.2s ease;
-      padding-bottom: -1rem;
-    }
-  }
-}
-
-@media screen and (max-width: 548px) {
-  .hero .hero-text {
-    font-size: 2rem;
-  }
-}
-
-@media screen and (max-device-width: 548px) {
-  .hero .hero-text {
-    font-size: 2rem;
-  }
 }
 
 /**
@@ -132,75 +72,6 @@ body {
 }
 
 /**
- * Styling forms
- */
-form {
-  h4 {
-    margin-bottom: 1rem;
-    font-weight: bold;
-  }
-
-  .col-6 {
-    padding-right: 7.5px;
-  }
-
-  .col-6 + .col-6 {
-    padding-left: 7.5px;
-    padding-right: 15px;
-  }
-
-  .form-control {
-    border: 2px solid $light-gray;
-    margin-bottom: 1rem;
-    border-radius: 0.2rem;
-    font-size: 16px;
-    padding: 0.75rem;
-
-    &:hover {
-      border: 2px solid $gray;
-    }
-
-    &:active,
-    &:focus {
-      border: 2px solid $secondary;
-    }
-  }
-
-  .btn {
-    border-radius: 0.2rem;
-    cursor: hand;
-    cursor: pointer;
-    color: white !important;
-    border: 0px solid transparent !important;
-    background: $primary;
-    font-weight: bold;
-    display: block;
-    font-size: 16px;
-    padding: 0.75rem 1.25rem;
-  }
-}
-
-::placeholder {
-  color: $border;
-}
-
-::-webkit-input-placeholder {
-  color: $border;
-}
-
-::-moz-placeholder {
-  color: $border;
-}
-
-:-ms-input-placeholder {
-  color: $border;
-}
-
-:-moz-placeholder {
-  color: $border;
-}
-
-/**
  * Styling background
  */
 .background {
@@ -224,109 +95,5 @@ form {
     .line:last-child {
       border-right: 0px solid transparent;
     }
-  }
-}
-
-.hero-text-wrapper {
-  &::before {
-    content: "";
-    position: absolute;
-    border-radius: 50%;
-    background: $secondary-transparent;
-    width: 16rem;
-    height: 16rem;
-    z-index: -1;
-    transform: translate(-8rem, -2rem);
-  }
-
-  &::after {
-    content: "";
-    position: absolute;
-    border-radius: 50%;
-    background: $secondary-transparent;
-    width: 8rem;
-    height: 8rem;
-    z-index: -1;
-    transform: translate(1rem, -3rem);
-  }
-
-  .hero-text + .hero-text {
-    &::before {
-      content: "";
-      position: absolute;
-      border-radius: 50%;
-      background: $secondary-transparent;
-      width: 12rem;
-      height: 12rem;
-      z-index: -1;
-      right: 0;
-    }
-  }
-}
-
-.arrow-wrapper {
-  width: 100%;
-  text-align: center;
-
-  .fa {
-    font-size: 2.2rem;
-    color: white;
-    padding: 0.5rem;
-    border-radius: 50%;
-    cursor: hand;
-    cursor: pointer;
-    transition: all 0.2s ease;
-    padding: 0.5rem;
-    background: #333;
-    box-shadow: 0rem 0.1rem 0.2rem rgba(0, 0, 0, 0.5);
-    opacity: 0.8;
-
-    &:hover {
-      opacity: 1;
-      background: $secondary;
-      transform: scale(1.2);
-    }
-  }
-}
-
-/**
- * Styling wrapper for contact
- */
-.contact {
-  padding-bottom: 4rem;
-}
-
-
-.alert {
-  border-width: 2px;
-  font-size: 1rem !important;
-}
-
-#about {
-  &::before {
-    content: "";
-    position: absolute;
-    border-radius: 50%;
-    background: $secondary-transparent;
-    width: 16rem;
-    height: 16rem;
-    z-index: -1;
-    transform: translate(-4rem, -3rem);
-  }
-}
-
-#technologies {
-  z-index: 1;
-
-  &::after {
-    content: "";
-    position: absolute;
-    border-radius: 50%;
-    background: $secondary-transparent;
-    width: 12rem;
-    height: 12rem;
-    bottom: 0;
-    right: 0;
-    transform: translate(4rem, 3rem);
   }
 }

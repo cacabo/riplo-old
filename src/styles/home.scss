@@ -1,0 +1,178 @@
+/**
+ * Styling for the homepage
+ */
+
+/**
+ * Styling video
+ */
+#video {
+  min-width: 100vw;
+  max-width: 100vw;
+  min-height: 60vh;
+  overflow: hidden;
+  position: absolute;
+  top: 0;
+  z-index: -10;
+  display: block;
+}
+
+/**
+ * Optimize video sizing and positioning for mobile
+ */
+@media screen and (max-width: 848px) {
+  #video {
+    min-height: 60vh;
+    max-height: 100vh;
+    min-width: 100vw;
+    max-width: none;
+  }
+}
+
+@media screen and (max-device-width: 848px) {
+  #video {
+    min-height: 60vh;
+    max-height: 100vh;
+    min-width: 100vw;
+    max-width: none;
+  }
+}
+
+
+/**
+ * Styling hero text which overlays the video
+ */
+.hero {
+  padding: 2rem 0rem;
+
+  .hero-text {
+    font-size: 2.4rem;
+    color: white;
+    text-shadow: 1px 2px 3px rgba(0, 0, 0, 0.2);
+    line-height: 1.2;
+    font-weight: bold;
+    margin-bottom: 1.5rem;
+
+    .underline {
+      border-bottom: 8px solid $primary;
+      transition: all 0.2s ease;
+      padding-bottom: -1rem;
+    }
+  }
+}
+
+/**
+ * Making the text smaller on smaller screens
+ */
+@media screen and (max-width: 548px) {
+  .hero .hero-text {
+    font-size: 2rem;
+  }
+}
+
+@media screen and (max-device-width: 548px) {
+  .hero .hero-text {
+    font-size: 2rem;
+  }
+}
+
+.hero-text-wrapper {
+  &::before {
+    content: "";
+    position: absolute;
+    border-radius: 50%;
+    background: $secondary-transparent;
+    width: 16rem;
+    height: 16rem;
+    z-index: -1;
+    transform: translate(-8rem, -2rem);
+  }
+
+  &::after {
+    content: "";
+    position: absolute;
+    border-radius: 50%;
+    background: $secondary-transparent;
+    width: 8rem;
+    height: 8rem;
+    z-index: -1;
+    transform: translate(1rem, -3rem);
+  }
+
+  .hero-text + .hero-text {
+    &::before {
+      content: "";
+      position: absolute;
+      border-radius: 50%;
+      background: $secondary-transparent;
+      width: 12rem;
+      height: 12rem;
+      z-index: -1;
+      right: 0;
+    }
+  }
+}
+
+/**
+ * Styling the clickable arrow to scroll downwards
+ */
+.arrow-wrapper {
+  width: 100%;
+  text-align: center;
+
+  .fa {
+    font-size: 2.2rem;
+    color: white;
+    padding: 0.5rem;
+    border-radius: 50%;
+    cursor: hand;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    padding: 0.5rem;
+    background: #333;
+    box-shadow: 0rem 0.1rem 0.2rem rgba(0, 0, 0, 0.5);
+    opacity: 0.8;
+
+    &:hover {
+      opacity: 1;
+      background: $secondary;
+      transform: scale(1.2);
+    }
+  }
+}
+
+/**
+ * Additional styling for the various homepage sections
+ */
+
+.contact {
+  padding-bottom: 4rem;
+}
+
+#about {
+  &::before {
+    content: "";
+    position: absolute;
+    border-radius: 50%;
+    background: $secondary-transparent;
+    width: 16rem;
+    height: 16rem;
+    z-index: -1;
+    transform: translate(-4rem, -3rem);
+  }
+}
+
+#technologies {
+  z-index: 1;
+
+  &::after {
+    content: "";
+    position: absolute;
+    border-radius: 50%;
+    background: $secondary-transparent;
+    width: 12rem;
+    height: 12rem;
+    bottom: 0;
+    right: 0;
+    transform: translate(4rem, 3rem);
+  }
+}
