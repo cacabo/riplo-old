@@ -4,9 +4,11 @@ import Fade from 'react-reveal/Fade';
 class Projects extends Component {
   render() {
     return (
-      <div className="container about" id="about">
+      <div className="container about" id="projects">
         <div className="row">
           <div className="col-12 col-md-10 offset-md-1 col-lg-8">
+            <div className="space-2" />
+            <div className="space-2 hidden-md-down" />
             <Fade left>
               <div className="card">
                 <h2 className="bold marg-bot-1">

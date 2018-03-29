@@ -39,7 +39,7 @@ export default () => (
                   <li>Ruby on Rails</li>
                   <li>Firebase</li>
                   <li>Heroku</li>
-                  <li>Amazon S3</li>
+                  <li>AWS</li>
                   <li>Git</li>
                 </ul>
               </div>

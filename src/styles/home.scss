@@ -161,6 +161,33 @@
   }
 }
 
+#projects {
+  &::before {
+    content: "";
+    position: absolute;
+    border-radius: 50%;
+    background: $secondary-transparent;
+    width: 18rem;
+    height: 18rem;
+    z-index: -1;
+    transform: translate(-3rem, -1rem);
+  }
+}
+
+#contact {
+  &::after {
+    content: "";
+    position: absolute;
+    border-radius: 50%;
+    background: $secondary-transparent;
+    width: 12rem;
+    height: 12rem;
+    z-index: -1;
+    right: 0;
+    transform: translate(3rem, -8rem);
+  }
+}
+
 #technologies {
   z-index: 1;
 

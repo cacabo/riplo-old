@@ -101,11 +101,11 @@ class Contact extends Component {
         <div className="space-2" />
         <div className="space-2 hidden-md-down" />
         <div className="row">
-          <div className="col-12 col-md-8 col-lg-6">
+          <div className="col-12 col-md-8 col-lg-6" id="contact">
             <Fade>
               <div className="card">
                 <form onSubmit={this.handleSubmit}>
-                  <h4>Contact us</h4>
+                  <h2 className="bold">Contact us</h2>
                   <div className="squiggle-1" />
                   <div className="squiggle-2" />
                   <br/>

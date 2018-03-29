@@ -57,21 +57,21 @@ form {
 }
 
 ::placeholder {
-  color: $border;
+  color: $gray !important;
 }
 
 ::-webkit-input-placeholder {
-  color: $border;
+  color: $gray !important;
 }
 
 ::-moz-placeholder {
-  color: $border;
+  color: $gray !important;
 }
 
 :-ms-input-placeholder {
-  color: $border;
+  color: $gray !important;
 }
 
 :-moz-placeholder {
-  color: $border;
+  color: $gray !important;
 }
