@@ -5,7 +5,7 @@ class Footer extends Component {
     return (
       <footer>
         <div className="container">
-          Riplo &copy; 2018. All rights reserved.
+          Riplo Ventures LLC &copy; 2018. All rights reserved.
         </div>
       </footer>
     );

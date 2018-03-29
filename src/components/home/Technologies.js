@@ -15,7 +15,7 @@ export default () => (
       <div className="col-11 col-md-8 offset-md-2 col-lg-6 offset-lg-3">
         <div className="space-4" />
         <div className="space-3" />
-        <div className="space-2" />
+        <div className="space-2" id="technologies"/>
         <div className="space-2 hidden-md-down" />
         <Fade>
           <div className="card">

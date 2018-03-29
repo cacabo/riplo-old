@@ -3,6 +3,15 @@ import SmoothScroll from 'smooth-scroll';
 import Fade from 'react-reveal/Fade';
 
 class Hero extends Component {
+  componentDidMount() {
+    const arrow = document.getElementById('arrow');
+    window.addEventListener('scroll', function() {
+      const top = document.documentElement.scrollTop;
+      if (top > 50) arrow.style.opacity = "0";
+      else arrow.style.opacity = "0.8";
+    });
+  }
+
   render() {
     const scroll = new SmoothScroll('a[href*="#"]', {
     	speed: 500,
@@ -33,6 +42,7 @@ class Hero extends Component {
         <div className="arrow-wrapper">
           <a href="#about">
             <i
+              id="arrow"
               className="fa fa-chevron-down"
               aria-hidden="true"
               onClick={(event) => {
