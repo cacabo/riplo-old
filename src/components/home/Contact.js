@@ -106,6 +106,9 @@ class Contact extends Component {
               <div className="card">
                 <form onSubmit={this.handleSubmit}>
                   <h4>Contact us</h4>
+                  <div className="squiggle-1" />
+                  <div className="squiggle-2" />
+                  <br/>
                   <ErrorMessage error={ this.state.error } />
                   <SuccessMessage message={this.state.success} />
                   <div className="row">

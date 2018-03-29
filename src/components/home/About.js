@@ -1,11 +1,23 @@
 import React, {Component} from 'react';
 import Fade from 'react-reveal/Fade';
+import Adam from '../../img/aripley.jpg';
+import Cam from '../../img/ccabo.jpeg';
 
 class About extends Component {
   render() {
     return (
       <div className="container about" id="about">
         <div className="row">
+          <div className="absolute col-10 offset-2 col-md-8 offset-md-3 col-lg-6 offset-lg-5">
+            <Fade right>
+              <img src={Adam} className="img-fluid card-img" alt="adam" />
+            </Fade>
+          </div>
+          <div className="absolute col-10 col-md-8 col-lg-6">
+            <Fade left>
+              <img src={Cam} className="img-fluid card-img" alt="adam" />
+            </Fade>
+          </div>
           <div className="col-12 col-md-10 offset-md-1 col-lg-8">
             <Fade left>
               <div className="card">
