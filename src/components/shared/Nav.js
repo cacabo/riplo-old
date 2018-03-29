@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import Logo from '../../img/riplo.svg';
+import ScrollLink from './ScrollLink';
 
 class Nav extends Component {
   constructor(props) {
@@ -38,13 +39,13 @@ class Nav extends Component {
           <img className="logo" alt="Riplo" src={Logo} />
           <h1 className="logo-text">Riplo</h1>
           <div className="links">
-            <a className="hidden-sm-down">Home</a>
-            <a>About</a>
-            <a>Projects</a>
-            <a>Contact</a>
+            <ScrollLink to="top" text="Home" hiddenMdDown />
+            <ScrollLink to="about" text="About" />
+            <ScrollLink to="projects" text="Projects" />
+            <ScrollLink to="contact" text="Contact" />
           </div>
         </nav>
-        <div className="nav-space" />
+        <div className="nav-space" id="top" />
       </div>
     );
   }
