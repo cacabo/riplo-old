@@ -17,7 +17,7 @@ export default () => (
         <div className="space-3" />
         <div className="space-2" />
         <div className="space-2 hidden-md-down" />
-        <Fade left>
+        <Fade>
           <div className="card">
             <h2 className="bold marg-bot-1">Technologies</h2>
             <div className="squiggle-1" />

@@ -17,6 +17,7 @@ class Contact extends Component {
       message: '',
       success: '',
       error: '',
+      pending: false,
     };
   }
 
@@ -31,22 +32,32 @@ class Contact extends Component {
   }
 
   handleSubmit(event) {
+    // Prevent the default action
     event.preventDefault();
+
+    // Denote that the submittal is pending
+    this.setState({ pending: true });
+
+    // Perform error checking
     if (!this.state.first) {
       this.setState({
         error: 'First name must be populated.',
+        pending: false,
       });
     } else if (!this.state.last) {
       this.setState({
         error: 'Last name must be populated.',
+        pending: false,
       });
     } else if (!this.state.email) {
       this.setState({
         error: 'email must be populated.',
+        pending: false,
       });
     } else if (!this.state.message) {
       this.setState({
         error: 'Message must be populated.',
+        pending: false,
       });
     } else {
       axios.post('/api/contact', {
@@ -64,18 +75,21 @@ class Contact extends Component {
             message: '',
             success: 'Message sent!',
             error: '',
+            pending: false,
           });
         } else {
           this.setState({
             error: resp.data.error,
             success: '',
-          })
+            pending: false,
+          });
         }
       })
       .catch(err => {
         this.setState({
           error: 'Hmmm there was an error sending your message, reach us at hello@riplo.io',
           success: '',
+          pending: false,
         });
       });
     }
@@ -88,7 +102,7 @@ class Contact extends Component {
         <div className="space-2 hidden-md-down" />
         <div className="row">
           <div className="col-12 col-md-8 col-lg-6">
-            <Fade left>
+            <Fade>
               <div className="card">
                 <form onSubmit={this.handleSubmit}>
                   <h4>Contact us</h4>
@@ -104,7 +118,15 @@ class Contact extends Component {
                   </div>
                   <input onChange={this.handleChange} name="email" value={this.state.email} className="form-control" placeholder="Email" />
                   <textarea onChange={this.handleChange} name="message" value={this.state.message} className="form-control" placeholder="What are you looking for..." />
-                  <input className="btn" type="submit" value="Send" />
+                  <input
+                    className={
+                      (this.state.pending || (
+                        !this.state.first || !this.state.last || !this.state.email || !this.state.message
+                      )) ? "btn disabled" : "btn"
+                    }
+                    type="submit"
+                    value={this.state.pending ? "Sending..." : "Send"}
+                  />
                 </form>
               </div>
             </Fade>
