@@ -57,6 +57,7 @@
   "scripts": {
     "start": "node scripts/start.js",
     "build": "node scripts/build.js",
+    "dev": "concurrently -k \"npm run frontend\" \"npm run backend\"",
     "test": "node scripts/test.js --env=jsdom",
     "frontend": "node scripts/start.js",
     "backend": "nodemon server.js"
