@@ -10,5 +10,11 @@
     "link": "https://www.themetric.org/",
     "description": "Web app for a student-run organization that publishes domestic policy, foreign policy, and current affairs-related content from across the world. This was built using Ruby on Rails and PostgreSQL.",
     "image": "metricweb.png"
+  },
+  {
+    "title": "YouthHack",
+    "link": "http://youthhack.net",
+    "description": "Website for an international organization dedicated to cultivating student entrepreneurship. We utilized HTML5, CSS3, Bootstrap, and Javascript while building this site.",
+    "image": "youthhackweb.png"
   }
 ]

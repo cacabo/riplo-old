@@ -19,8 +19,8 @@ class Browser extends Component {
 }
 
 Browser.propTypes = {
-  image: PropTypes.String,
-  alt: PropTypes.String,
+  image: PropTypes.string,
+  alt: PropTypes.string,
 };
 
 export default Browser;
