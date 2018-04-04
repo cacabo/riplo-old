@@ -24,7 +24,10 @@ class Nav extends Component {
     }
 
     window.addEventListener('scroll', function() {
-      if (document.documentElement.scrollTop > 20) {
+      if (
+        document.documentElement.scrollTop > 20 ||
+        window.pageYOffset > 20
+      ) {
         scrolled();
       } else {
         unscrolled();
