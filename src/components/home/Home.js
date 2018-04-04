@@ -6,6 +6,7 @@ import Hero from './Hero';
 import About from './About';
 import Technologies from './Technologies';
 import Projects from './Projects';
+import NewProjects from './projects/Projects';
 import Contact from './Contact';
 
 class Home extends Component {
@@ -16,6 +17,7 @@ class Home extends Component {
         <Hero />
         <About />
         <Technologies />
+        <NewProjects />
         <Projects />
         <Contact />
       </div>

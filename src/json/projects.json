@@ -1,0 +1,14 @@
+[
+  {
+    "title": "Nalda",
+    "link": "https://www.naldacampus.com",
+    "description": "Web app for a centralized source of information on fun, food, and activities on college campuses. We paired with a Penn startup to build this using a React/Redux, Express, MongoDB, and Node stack.",
+    "image": "naldaweb.png"
+  },
+  {
+    "title": "The Metric",
+    "link": "https://www.themetric.org/",
+    "description": "Web app for a student-run organization that publishes domestic policy, foreign policy, and current affairs-related content from across the world. This was built using Ruby on Rails and PostgreSQL.",
+    "image": "metricweb.png"
+  }
+]
