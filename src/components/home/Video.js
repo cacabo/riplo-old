@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import Image from '../../img/video-image.png';
 
 class Video extends Component {
   componentDidMount() {
@@ -10,15 +11,23 @@ class Video extends Component {
 
   render() {
     return (
-      <video
-        id="video"
-        playsInline
-        autoPlay
-        muted
-        loop
-      >
-        <source src="https://s3.amazonaws.com/riplo/RiploVideo.mp4" type="video/mp4" />
-      </video>
+      <div>
+        <video
+          id="video"
+          playsInline
+          autoPlay
+          muted
+          loop
+          className="hidden-md-down"
+        >
+          <source src="https://s3.amazonaws.com/riplo/RiploVideo.mp4" type="video/mp4" />
+        </video>
+        <div
+          id="hero-image"
+          className="background-image hidden-lg-up"
+          style={{backgroundImage: `url(${Image})`}}
+        />
+      </div>
     );
   }
 }
