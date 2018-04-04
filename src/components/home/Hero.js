@@ -15,7 +15,7 @@ class Hero extends Component {
   render() {
     const scroll = new SmoothScroll('a[href*="#"]', {
     	speed: 500,
-    	offset: 100,
+    	offset: 55,
     });
 
     return (

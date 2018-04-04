@@ -5,7 +5,7 @@ import SmoothScroll from 'smooth-scroll';
 const ScrollLink = ({ to, text, hiddenMdDown }) => {
   const scroll = new SmoothScroll('a[href*="#"]', {
     speed: 500,
-    offset: 100,
+    offset: 55,
   });
 
   return(
